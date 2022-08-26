@@ -1,25 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
 
 *{
     box-sizing: border-box;
 }
 
 :root{
-    --primary-color: #8a7d74;
-    --secondary-color: #a0958d;
+    --primary-color: #181614;
+    --secondary-color: #2b292b;
 }
 
 body{
     background-color: var(--primary-color);
-    font-family: 'Lato', sans-serif;
+    font-family: 'EB Garamond', serif;
     margin: 0;
 }
 
 header{
     padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
     background-color: var(--secondary-color);
+}
+
+header #form {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+#form #search {
+    margin: 0.5rem;
+    padding: 0px 20px;
+}
+
+#form h3 {
+    font-weight: 500;
+    color: #d4d4d4;
 }
 
 .search{
@@ -38,7 +52,7 @@ header{
 }
 
 .search::placeholder{
-    color: #d8d3d0;
+    color: #d4d4d4;
 }
 
 main{
@@ -50,8 +64,8 @@ main{
 .movie{
     width: 300px;
     margin: 1rem;
-    border-radius: 3px;
-    border: 1px  solid #756a63;
+    border-radius: 15px;
+    border: 1px  solid #3b3a3b;
     background-color: var(--secondary-color);
     position: relative;
     overflow: hidden;
@@ -60,6 +74,10 @@ main{
 .movie img{
     width: 100%;
     border-radius: 3px;
+}
+
+.movieIMG:hover img {
+    opacity: 0.3;
 }
 
 .movie-info{
@@ -72,18 +90,20 @@ main{
 }
 
 .movie-info h3{
-    margin-top: 0;
+    font-weight: 400;
+    margin: 0rem 0rem 0rem;
+    color: #bfbebf;
 }
 
 .movie-info span{
     background-color: var(--primary-color);
-    padding: 0.75rem 0.5rem;
-    border-radius: 3px;
+    padding: 0.75rem 0.75rem;
+    border-radius: 10px 100px / 120px;
     font-weight: bold;
 }
 
 .movie-info span.green{
-    color: #c4d2b3;
+    color: #acc864;
 }
 
 .movie-info span.orange{
@@ -95,15 +115,23 @@ main{
 }
 
 .overview{
+    border-radius: 15px;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem 1rem 2rem;
     max-height: 100%;
+    text-align: center;
+    font-weight: 400;
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 .movie:hover .overview{
