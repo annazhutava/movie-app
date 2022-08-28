@@ -137,3 +137,40 @@ main{
 .movie:hover .overview{
     transform: translateY(0);
 }
+
+.pagination {
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.page {
+    padding: 5px 15px;
+    margin: 20px;
+    cursor: pointer;
+    border: 1px solid #92817b;
+    border-radius: 20px;
+}
+
+.page:hover {
+    background-color: #030202;
+}
+
+.page.disabled {
+    cursor: not-allowed;
+    color: grey;
+}
+
+.page.disabled:hover {
+    background-color: var(--primary-color);
+}
+
+.current {
+    padding: 8px 17px;
+    border-radius: 50px;
+    border: 2px solid #92817b;
+    font-size: 20px;
+    font-weight: 500;
+}
