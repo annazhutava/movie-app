@@ -45,8 +45,6 @@ function getMovies(url) {
             prev.classList.remove('disabled');
             next.classList.remove('disabled');
         }
-
-        form.scrollIntoView({behavior : 'smooth'});
     })
 }
 
@@ -101,18 +99,22 @@ form.addEventListener('submit', (e) => {
     else {
         getMovies(API_URL);
     }
+
+    main.scrollIntoView({behavior: 'smooth'});
 })
 
 prev.addEventListener('click', () => {
     if(prevPage > 0){
         pageCall(prevPage);
     }
+    main.scrollIntoView({behavior: 'smooth'});
 })
 
 next.addEventListener('click', () => {
     if(nextPage <= totalPages){
         pageCall(nextPage);
     }
+    main.scrollIntoView({behavior: 'smooth'});
 })
 
 function pageCall(page){

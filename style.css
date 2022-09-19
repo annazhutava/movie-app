@@ -16,29 +16,106 @@ body{
 }
 
 header{
+    position: relative;
     padding: 1rem;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 800px 450px;
+    background-position: center;
+    background-image: 
+    linear-gradient(to right bottom, 
+     rgba(108, 103, 99, 0.404),
+     rgba(39, 28, 20, 0.726)),
+    url("https://images.pexels.com/photos/558478/pexels-photo-558478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+
+@media only screen and (max-width: 768px){
+    header{
+    position: relative;
+    padding: 1rem;
+    height: 100vh;
+    background-color: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: 70% 30%;
+    background-position: center;
+    }
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px){
+    .text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.heading-primary {
+    color: #e5ecf3;
+    backface-visibility: hidden;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 180px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 768px){
+    .heading-primary-main{
+        font-size: 3.3rem;
+    } 
+}
+
+.heading-sub {
+    backface-visibility: hidden;
+    color: #aca6a6;
+    padding-top: 490px;
+    text-align: center;    
+}
+
+.heading-primary-sub {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: lighter;
+    letter-spacing: 7.4px;
+    line-height: 20px;
+    /*border-bottom: 1px solid rgb(85, 81, 81);*/
+    width: 30rem;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px){
+    .heading-primary-sub{
+        width: 20rem;
+    } 
 }
 
 header #form {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 20px;
+    justify-content: center;
 }
 
 #form #search {
     margin: 0.5rem;
-    padding: 0px 20px;
-}
-
-#form h3 {
-    font-weight: 500;
-    color: #d4d4d4;
+    padding: 10px 20px;
 }
 
 .search{
     background-color: transparent;
-    border: 1px solid var(--primary-color);
+    border: 1px solid #92817b;
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
@@ -48,7 +125,7 @@ header #form {
 
 .search:focus{
     outline: 0;
-    background-color: var(--primary-color);
+    background-color: #0d0c0b;
 }
 
 .search::placeholder{
